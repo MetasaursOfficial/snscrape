@@ -662,7 +662,7 @@ class TwitterSearchScraper(_TwitterAPIScraper):
 			'send_error_codes': 'true',
 			'simple_quoted_tweets': 'true',
 			'q': self._query,
-			'tweet_search_mode': 'live',
+			#'tweet_search_mode': 'live',
 			'count': '100',
 			'query_source': 'typed_query',
 			'cursor': None,
