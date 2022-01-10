@@ -621,7 +621,7 @@ class TwitterSearchScraper(_TwitterAPIScraper):
 	def __init__(self, query, cursor = None, top = False, **kwargs):
 		if not query.strip():
 			raise ValueError('empty query')
-		super().__init__(baseUrl = 'https://twitter.com/search?' + urllib.parse.urlencode({'f': 'top', 'lang': 'en', 'q': query, 'src': 'spelling_expansion_revert_click'}), **kwargs)
+		super().__init__(baseUrl = 'https://twitter.com/search?' + urllib.parse.urlencode({'lang': 'en', 'q': query, 'src': 'spelling_expansion_revert_click'}), **kwargs)
 		self._query = query  # Note: may get replaced by subclasses when using user ID resolution
 		self._cursor = cursor
 		self._top = top
